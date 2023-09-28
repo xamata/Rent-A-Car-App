@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace RentACarAppLibrary.Data
 {
-    internal class SqlData
+    public class SqlData
     {
     }
 }
