@@ -1,15 +1,16 @@
-﻿CREATE PROCEDURE [dbo].[spCarTypes_GetAvailableTypes]
+﻿CREATE PROCEDURE [dbo].[spCars_GetAvailableCars]
 	@startDate date,
-	@endDate date
+	@endDate date,
+	@carTypeId int
 AS
 begin
 	set nocount on;
-
-	select t.Id,t.Make,t.Model, t.Year, t.Description, t.Price
+	select [c].[Id], [c].[License], [c].[CarTypeId]
 	from dbo.Cars c
 	inner join dbo.CarTypes t on t.Id = c.CarTypeId
-	--Unvailable car check:
-	where c.Id not in (
+	where c.CarTypeId = @carTypeId
+	--Avaiable cars check:
+	and c.Id not in (
 	select r.CarId
 	from dbo.Rentals r
 	--Checks outside of booked dates
@@ -18,6 +19,5 @@ begin
 		or (r.StartDate <= @endDate and @endDate < r.EndDate)
 	--Check if start date is within booked room dates
 		or (r.StartDate <= @startDate and @startDate < r.EndDate)
-	) 
-	group by t.Id,t.Make,t.Model, t.Year, t.Description, t.Price;
+	);
 end
