@@ -66,5 +66,13 @@ namespace RentACarAppLibrary.Data
                 connectionStringName,
                 true);
         }
+
+        public void CheckInGuest(int rentalId)
+        {
+            _db.SaveData("dbo.spRentals_CheckIn",
+                new { Id = rentalId },
+                connectionStringName,
+                true);
+        }
     }
 }
