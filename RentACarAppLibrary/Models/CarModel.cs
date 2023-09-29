@@ -9,7 +9,7 @@ namespace RentACarAppLibrary.Models
     public class CarModel
     {
         public int Id { get; set; }
-        public CarTypeModel CarType { get; set; }
+        public int CarTypeId { get; set; }
         public string License { get; set; }
     }
 }

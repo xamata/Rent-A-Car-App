@@ -58,5 +58,13 @@ namespace RentACarAppLibrary.Data
                 connectionStringName,
                 true);
         }
+
+        public List<RentalFullModel> SearchRentals(string lastName)
+        {
+            return _db.LoadData<RentalFullModel, dynamic>("dbo.spRentals_Search",
+                new { lastName, startDate = DateTime.Now.Date },
+                connectionStringName,
+                true);
+        }
     }
 }

@@ -60,12 +60,18 @@
     <Folder Include="dbo\Tables" />
     <Folder Include="Scripts" />
     <Folder Include="Publish Profiles" />
+    <Folder Include="dbo\Stored Procedures" />
   </ItemGroup>
   <ItemGroup>
     <Build Include="dbo\Tables\Guests.sql" />
     <Build Include="dbo\Tables\Cars.sql" />
     <Build Include="dbo\Tables\CarTypes.sql" />
     <Build Include="dbo\Tables\Rentals.sql" />
+    <Build Include="dbo\Stored Procedures\spCarTypes_GetAvailableTypes.sql" />
+    <Build Include="dbo\Stored Procedures\spGuests_Insert.sql" />
+    <Build Include="dbo\Stored Procedures\spCars_GetAvailableCars.sql" />
+    <Build Include="dbo\Stored Procedures\spRentals_Insert.sql" />
+    <Build Include="dbo\Stored Procedures\spRentals_Search.sql" />
   </ItemGroup>
   <ItemGroup>
     <RefactorLog Include="RentACarAppDb.refactorlog" />
