@@ -38,8 +38,8 @@
                 </td>
                 <td>@string.Format("{0:C}", car.Price)</td>
                 <td>
-                    <a asp-page="/BookRoom"
-                       asp-route-roomTypeId="@car.Id"
+                    <a asp-page="/BookCar"
+                       asp-route-carTypeId="@car.Id"
                        asp-route-startDate="@Model.StartDate.ToShortDateString()"
                        asp-route-endDate="@Model.EndDate.ToShortDateString()">Book Now</a>
                 </td>

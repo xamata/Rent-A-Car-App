@@ -8,5 +8,6 @@ namespace RentACarAppLibrary.Data
         List<CarTypeModel> GetAvailableCarTypes(DateTime startDate, DateTime endDate);
         void RentCar(string firstName, string lastName, DateTime startDate, DateTime endDate, int carTypeId);
         List<RentalFullModel> SearchRentals(string lastName);
+        public CarTypeModel GetCarTypeById(int id);
     }
 }

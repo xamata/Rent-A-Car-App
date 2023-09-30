@@ -1,0 +1,22 @@
+﻿@page
+@model RentACarApp.Web.Pages.BookCarModel
+@{
+}
+
+<h1>Car Search</h1>
+
+<h2>@Model.CarType.Make @Model.CarType.Model @Model.CarType.Year</h2>
+<p>
+    @Model.CarType.Description
+</p>
+<form method="post">
+    <div class="form-label">
+        <label asp-for="@Model.FirstName"></label>
+        <input asp-for="@Model.FirstName" />
+    </div>
+    <div class="form-label">
+        <label asp-for="@Model.LastName"></label>
+        <input asp-for="@Model.LastName" />
+    </div>
+    <button type="submit" class="btn btn-primary">Rent</button>
+</form>

@@ -74,5 +74,12 @@ namespace RentACarAppLibrary.Data
                 connectionStringName,
                 true);
         }
+        public CarTypeModel GetCarTypeById(int id)
+        {
+            return _db.LoadData<CarTypeModel, dynamic>("dbo.spCarTypes_GetById",
+                new { id },
+                connectionStringName,
+                true).FirstOrDefault();
+        }
     }
 }
