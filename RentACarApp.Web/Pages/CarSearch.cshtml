@@ -5,11 +5,11 @@
 
 <h1>Car Search</h1>
 <form method="post">
-    <div class="form-group">
+    <div class="form-label">
         <label asp-for="@Model.StartDate"></label>
         <input asp-for="@Model.StartDate" />
     </div>
-    <div class="form-group">
+    <div class="form-label">
         <label asp-for="@Model.EndDate"></label>
         <input asp-for="@Model.EndDate" />
     </div>
@@ -33,9 +33,7 @@
         {
             <tr>
                 <td>
-                    <strong>@car.Make</strong><br />
-                    <strong>@car.Model</strong><br />
-                    <strong>@car.Year</strong><br />
+                    <strong>@car.Make @car.Model @car.Year</strong><br />
                     @car.Description
                 </td>
                 <td>@string.Format("{0:C}", car.Price)</td>
