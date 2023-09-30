@@ -15,3 +15,38 @@
     </div>
     <button type="submit" class="btn btn-primary">Search</button>
 </form>
+
+@if (Model.AvailableCarTypes?.Count > 0)
+{
+<br />
+<h2>Results</h2>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Car Type</th>
+            <th>Price</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var car in Model.AvailableCarTypes)
+        {
+            <tr>
+                <td>
+                    <strong>@car.Make</strong><br />
+                    <strong>@car.Model</strong><br />
+                    <strong>@car.Year</strong><br />
+                    @car.Description
+                </td>
+                <td>@string.Format("{0:C}", car.Price)</td>
+                <td>
+                    <a asp-page="/BookRoom"
+                       asp-route-roomTypeId="@car.Id"
+                       asp-route-startDate="@Model.StartDate.ToShortDateString()"
+                       asp-route-endDate="@Model.EndDate.ToShortDateString()">Book Now</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+}

@@ -1,7 +1,12 @@
+using RentACarAppLibrary.Data;
+using RentACarAppLibrary.DataAccess;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddRazorPages();
+builder.Services.AddTransient<IDatabaseData, SqlData>();
+builder.Services.AddTransient<ISqlDataAccess, SqlDataAccess>();
 
 var app = builder.Build();
 

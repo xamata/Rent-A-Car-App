@@ -72,6 +72,7 @@
     <Build Include="dbo\Stored Procedures\spCars_GetAvailableCars.sql" />
     <Build Include="dbo\Stored Procedures\spRentals_Insert.sql" />
     <Build Include="dbo\Stored Procedures\spRentals_Search.sql" />
+    <Build Include="dbo\Stored Procedures\spRentals_CheckIn.sql" />
   </ItemGroup>
   <ItemGroup>
     <RefactorLog Include="RentACarAppDb.refactorlog" />
