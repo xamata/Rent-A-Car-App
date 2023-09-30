@@ -7,6 +7,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RentACarAppLibrary", "RentA
 EndProject
 Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "RentACarAppDb", "RentACarAppDb\RentACarAppDb.sqlproj", "{E71C8698-B1C9-46C2-913F-D3ECAB4C67E8}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RentACarApp.Web", "RentACarApp.Web\RentACarApp.Web.csproj", "{AA6E16FD-2875-42B6-85EE-83AE95AC8836}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -23,6 +25,10 @@ Global
 		{E71C8698-B1C9-46C2-913F-D3ECAB4C67E8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E71C8698-B1C9-46C2-913F-D3ECAB4C67E8}.Release|Any CPU.Build.0 = Release|Any CPU
 		{E71C8698-B1C9-46C2-913F-D3ECAB4C67E8}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{AA6E16FD-2875-42B6-85EE-83AE95AC8836}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AA6E16FD-2875-42B6-85EE-83AE95AC8836}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AA6E16FD-2875-42B6-85EE-83AE95AC8836}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AA6E16FD-2875-42B6-85EE-83AE95AC8836}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
