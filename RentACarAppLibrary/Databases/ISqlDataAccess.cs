@@ -1,4 +1,4 @@
-﻿namespace RentACarAppLibrary.DataAccess
+﻿namespace RentACarAppLibrary.Databases
 {
     public interface ISqlDataAccess
     {

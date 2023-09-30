@@ -3,7 +3,7 @@ using Microsoft.Data.SqlClient;
 using Microsoft.Extensions.Configuration;
 using System.Data;
 
-namespace RentACarAppLibrary.DataAccess
+namespace RentACarAppLibrary.Databases
 {
     public class SqlDataAccess : ISqlDataAccess
     {
