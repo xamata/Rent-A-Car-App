@@ -20,7 +20,6 @@ namespace RentACarApp.Desktop
             InitializeComponent();
             _db = db;
         }
-
         private void searchForGuest_Click(object sender, RoutedEventArgs e)
         {
             List<RentalFullModel> rentals = _db.SearchRentals(lastNameText.Text);

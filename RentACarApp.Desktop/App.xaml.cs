@@ -20,16 +20,14 @@ namespace RentACarApp.Desktop
             var services = new ServiceCollection();
             services.AddTransient<MainWindow>();
             services.AddTransient<CheckInForm>();
+            services.AddTransient<ISqlDataAccess, SqlDataAccess>();
+            services.AddTransient<IDatabaseData, SqlData>();
 
             var builder = new ConfigurationBuilder()
                 .SetBasePath(Directory.GetCurrentDirectory())
                 .AddJsonFile("appsettings.json");
 
             IConfiguration config = builder.Build();
-
-            services.AddTransient<IDatabaseData, SqlData>();
-
-            services.AddTransient<ISqlDataAccess, SqlDataAccess>();
 
             services.AddSingleton(config);
 
