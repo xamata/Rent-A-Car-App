@@ -1,10 +1,117 @@
 ﻿@page
 @model IndexModel
 @{
-    ViewData["Title"] = "Home page";
+    ViewData["Title"] = "Car Rental";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>@ViewData["Title"]</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        /* Custom CSS styles for the homepage */
+        body {
+            background-color: #f7f7f7;
+            font-family: Arial, sans-serif;
+        }
+
+        .header {
+            background-color: #007BFF;
+            padding: 15px 0;
+            color: white;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 36px;
+            margin-bottom: 10px;
+        }
+
+        .header p {
+            font-size: 18px;
+        }
+
+        .container {
+            margin-top: 20px;
+        }
+
+        .search-box {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+        }
+
+        .btn-search {
+            background-color: #007BFF;
+            color: white;
+        }
+
+        .car-card {
+            margin-bottom: 20px;
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+        }
+
+        .car-card img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .car-card h3 {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Welcome to Our Car Rental Service</h1>
+        <p>Your Journey Starts Here</p>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 offset-md-3">
+                <div class="search-box">
+                    <h2 class="text-center">Find Your Perfect Car</h2>
+                    <form method="get" asp-page="Search">
+                        <div class="form-group">
+                            <label for="pickupDate">Pickup Date</label>
+                            <input type="date" class="form-control" id="pickupDate" name="pickupDate" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="returnDate">Return Date</label>
+                            <input type="date" class="form-control" id="returnDate" name="returnDate" required>
+                        </div>
+                        <button type="submit" class="btn btn-search btn-block">Search</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!-- Featured Cars -->
+        <h2 class="mt-4">Featured Cars</h2>
+        <div class="row">
+            @foreach (var car in Model.FeaturedCars)
+            {
+                <div class="col-md-4">
+                    <div class="car-card">
+                        <img src="@car.ImageUrl" alt="@car.Make @car.Model">
+                        <h3>@car.Make @car.Model</h3>
+                        <p>@car.Description</p>
+                        <p><strong>Price per Day:</strong> $@car.PricePerDay</p>
+                        <a href="#" class="btn btn-primary">Rent Now</a>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
