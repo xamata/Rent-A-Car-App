@@ -7,9 +7,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RentACarAppLibrary", "RentA
 EndProject
 Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "RentACarAppDb", "RentACarAppDb\RentACarAppDb.sqlproj", "{E71C8698-B1C9-46C2-913F-D3ECAB4C67E8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RentACarApp.Web", "RentACarApp.Web\RentACarApp.Web.csproj", "{AA6E16FD-2875-42B6-85EE-83AE95AC8836}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RentACarApp.Web", "RentACarApp.Web\RentACarApp.Web.csproj", "{AA6E16FD-2875-42B6-85EE-83AE95AC8836}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RentACarApp.Desktop", "RentACarApp.Desktop\RentACarApp.Desktop.csproj", "{A3EC46D2-A74B-43A1-9D0D-1FC06C3FD367}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RentACarApp.Desktop", "RentACarApp.Desktop\RentACarApp.Desktop.csproj", "{A3EC46D2-A74B-43A1-9D0D-1FC06C3FD367}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RentACarAppApi", "RentACarAppApi\RentACarAppApi.csproj", "{E458913B-FFFA-4507-B64E-6D724F86B395}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -35,6 +37,10 @@ Global
 		{A3EC46D2-A74B-43A1-9D0D-1FC06C3FD367}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A3EC46D2-A74B-43A1-9D0D-1FC06C3FD367}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A3EC46D2-A74B-43A1-9D0D-1FC06C3FD367}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E458913B-FFFA-4507-B64E-6D724F86B395}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E458913B-FFFA-4507-B64E-6D724F86B395}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E458913B-FFFA-4507-B64E-6D724F86B395}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E458913B-FFFA-4507-B64E-6D724F86B395}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
