@@ -4,7 +4,12 @@
     <TargetFramework>net7.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
+    <UserSecretsId>abe79ce7-c79d-4a1c-ad18-e48dd2011e40</UserSecretsId>
   </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="System.Net.Http.Json" Version="7.0.1" />
+  </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\RentACarAppLibrary\RentACarAppLibrary.csproj" />
